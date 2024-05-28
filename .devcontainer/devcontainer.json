@@ -29,6 +29,6 @@
 		}
 	},
 	"runArgs": [
-		"--network=host"
+		"--net=host"
 	]
 }

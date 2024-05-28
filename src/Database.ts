@@ -10,6 +10,7 @@ class Database {
   private connection: oracledb.Connection | null = null
 
   public static getInstance(): Database {
+
     if (!Database.instance) {
       Database.instance = new Database()
     }
@@ -20,9 +21,12 @@ class Database {
     user: string,
     password: string,
   ): Promise<oracledb.Connection> {
+
     if (this.connection) {
       return this.connection
     }
+
+
 
     try {
       const connect = await oracledb.getConnection({
@@ -30,12 +34,13 @@ class Database {
         password,
         connectString: 'exacc01-scan.pbh:1521/sirh.pbh',
       })
+     
       this.connection = connect
+     
     } catch (error) {
       console.error('Erro ao conectar ao banco de dados Oracle:', error)
       throw error
     }
-
     return this.connection
   }
 
@@ -58,7 +63,7 @@ class Database {
       throw new Error('Conexão com o banco de dados não estabelecida.')
     }
     const result = await this.connection.execute<T>(query, binds)
-    console.log(result)
+    // console.log(result)
     if (!result.rows) {
       return []
     }
