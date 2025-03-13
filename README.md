@@ -35,9 +35,15 @@ cd bh-digital
 ```sh
 npm install
 ```
+
 ### 3️⃣ Configurar a conexão com o banco
 
-Edite o arquivo .env (se necessário) e configure as credenciais do banco Oracle.
+Crie o arquivo .env e configure as credenciais do banco Oracle.
+```.env
+DB_USER=
+DB_PASSWORD=
+DB_CONNECT_STRING=
+```
 
 ### 4️⃣ Executar o script
 
