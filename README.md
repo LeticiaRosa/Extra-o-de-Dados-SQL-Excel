@@ -51,6 +51,7 @@ DB_CONNECT_STRING=
 npm run dev
 ```
 
+Mais detalhes em: https://chatgpt.com/canvas/shared/67e6d4150f6c8191b0971b026f1892e0
 
 ## 📄 Estrutura do Projeto
 
